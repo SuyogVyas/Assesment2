@@ -1,0 +1,79 @@
+<h1 style="margin-left: 40%;" >Person Form</h1>
+<form  class="example-form" #personForm="ngForm" (ngSubmit)="savePerson(personForm)">
+   <div class = "container" style = "margin-left: 20%;"> 
+    <div class = "row ">
+        <div class = "col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>FirstName</mat-label>
+                <input required matInput type="text" name = "fname" ngModel>
+              </mat-form-field><br>
+        </div>
+        <div class = "col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>MiddleName</mat-label>
+                <input matInput type="text" name = "mname" ngModel>
+              </mat-form-field><br>
+        </div>
+        <div class = "col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>LastName</mat-label>
+                <input required matInput type="text" name = "lname" ngModel>
+              </mat-form-field><br>
+        </div>
+    </div>
+
+    <div class ="row ">
+        <div class = "col">
+            <mat-form-field appearance="fill">
+                <mat-label>Gender</mat-label>
+                <mat-select required  name="gender" ngModel>
+                  <mat-option value="Male">Male</mat-option>
+                  <mat-option value="Female">Female</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+
+        <div class = "col"> 
+            <mat-form-field appearance="fill">
+                <mat-label>Deparment</mat-label>
+                <mat-select required  name="department" ngModel>
+                  <mat-option value="IT">IT</mat-option>
+                  <mat-option value="HR">HR</mat-option>
+                  <mat-option value="payroll">payroll</mat-option>
+                  <mat-option value="Networking">Networking</mat-option>
+                  <mat-option value="Admin">Admin</mat-option>
+        
+                </mat-select>
+              </mat-form-field><br>
+        </div>
+
+        <div class = "col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Address1</mat-label>
+                <textarea required matInput name = "add1" [(ngModel)] = "address"></textarea>
+              </mat-form-field>
+              
+        </div>
+    </div>
+    
+    <div class = "row">
+        <div class = "col">
+            
+      <mat-label>Choose a date</mat-label><br>
+      <input required type  = "date" name = "date" ngModel ><br><br>
+      <p></p>
+        </div>
+
+        <div class = "col">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Pincode</mat-label>
+                <input required matInput type="text" [(ngModel)] = "pincode" #pincodee = "ngModel" name = "pcode" > 
+              </mat-form-field>
+              <p><span style = "color: red;" *ngIf = "pincode.length>6">Length should not be greater than 6</span></p>
+        </div>
+    </div>
+    
+      <button style = "margin-left: 30%;" mat-raised-button color="primary">Submit</button>
+
+    </div>
+  </form>
