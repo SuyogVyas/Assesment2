@@ -27,7 +27,7 @@ import { InterviewExperienceComponent } from './interview-experience/interview-e
     MatSelectModule,
     FormsModule,
     MatDatepickerModule,
-    MatButtonModule
+    MatButtonModule,MiteshModule
   ],
   providers: [],
   bootstrap: [AppComponent]
