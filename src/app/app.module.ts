@@ -26,7 +26,7 @@ import { PersonDirective } from './Directives/person.directive';
     MatSelectModule,
     FormsModule,
     MatDatepickerModule,
-    MatButtonModule
+    MatButtonModule,MiteshModule
   ],
   providers: [],
   bootstrap: [AppComponent]
