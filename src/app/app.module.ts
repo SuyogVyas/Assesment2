@@ -13,10 +13,11 @@ import { PersonComponent } from './person/person.component';
 import { StudentComponent } from './student/student.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PersonDirective } from './Directives/person.directive';
+import { InterviewExperienceComponent } from './interview-experience/interview-experience.component';
 
 @NgModule({
   declarations: [
-    AppComponent,StudentComponent,StudentDirective,NavBar,PersonComponent,PersonDirective
+    AppComponent,StudentComponent,StudentDirective,NavBar,PersonComponent,PersonDirective, InterviewExperienceComponent
   ],
   imports: [
     BrowserModule,
